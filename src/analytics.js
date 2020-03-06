@@ -7,7 +7,7 @@ function createAnalytics() {
 
     return {
         getClicks() {
-            return ('Количество кликов', counter)
+            return ('Количество кликов = ${counter}')
         }
     }
 }

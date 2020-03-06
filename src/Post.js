@@ -7,4 +7,8 @@ export default class Post {
     showTitle() {
         console.log(this.title)
     }
+
+    showDesc() {
+        console.log('description of post')
+    }
 }

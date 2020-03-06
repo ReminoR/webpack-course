@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("function createAnalytics() {\n    let counter = 0\n\n    const listener = () => counter++\n\n    document.addEventListener('click', listener)\n\n    return {\n        getClicks() {\n            return ('Количество кликов', counter)\n        }\n    }\n}\n\nwindow.analytics = createAnalytics()\n\n//# sourceURL=webpack:///./src/analytics.js?");
+eval("function createAnalytics() {\n    let counter = 0\n\n    const listener = () => counter++\n\n    document.addEventListener('click', listener)\n\n    return {\n        getClicks() {\n            return ('Количество кликов = ${counter}')\n        }\n    }\n}\n\nwindow.analytics = createAnalytics()\n\n//# sourceURL=webpack:///./src/analytics.js?");
 
 /***/ })
 
