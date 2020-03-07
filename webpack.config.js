@@ -34,5 +34,15 @@ module.exports = {
                 use: ['file-loader']
             }
         ]
+    },
+    resolve: {
+        alias: {
+            '@': path.resolve(__dirname, 'src'),
+        }
+    },
+    optimization: {
+        splitChunks: {
+            chunks: 'all'
+        }
     }
 }
