@@ -81,32 +81,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./analytics.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/Post.js":
-/*!*********************!*\
-  !*** ./src/Post.js ***!
-  \*********************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Post; });\nclass Post {\n    constructor(title) {\n    this.title = title\n    this.date = new Date()\n    }\n\n    showTitle() {\n        console.log(this.title)\n    }\n}\n\n//# sourceURL=webpack:///./src/Post.js?");
-
-/***/ }),
-
-/***/ "./src/index.js":
+/***/ "./analytics.js":
 /*!**********************!*\
-  !*** ./src/index.js ***!
+  !*** ./analytics.js ***!
   \**********************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Post__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Post */ \"./src/Post.js\");\n\n\nconst post = new _Post__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('Webpack post title')\nconsole.log(post.showTitle())\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("function createAnalytics() {\n    let counter = 0\n    let destroyed = false\n\n    const listener = () => counter++\n\n    document.addEventListener('click', listener)\n\n    return {\n        getClicks() {\n            return ('Количество кликов = ${counter}')\n        }\n    }\n}\n\nwindow.analytics = createAnalytics()\n\n//# sourceURL=webpack:///./analytics.js?");
 
 /***/ })
 
