@@ -129,7 +129,30 @@ eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function mem
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Post; });\nclass Post {\n    constructor(title) {\n    this.title = title\n    this.date = new Date()\n    }\n\n    showTitle() {\n        console.log(this.title)\n    }\n\n    showDesc() {\n        console.log('description of post')\n    }\n}\n\n//# sourceURL=webpack:///./Post.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Post; });\nclass Post {\n    constructor(title, img) {\n    this.title = title\n    this.img = img\n    this.date = new Date()\n    }\n\n    showTitle() {\n        console.log(this.title)\n    }\n\n    showDesc() {\n        console.log('description of post')\n    }\n    showLogo() {\n        return JSON.stringify( {\n            title: this.title,\n            img: this.img\n        })\n    }\n}\n\n//# sourceURL=webpack:///./Post.js?");
+
+/***/ }),
+
+/***/ "./assets/json.json":
+/*!**************************!*\
+  !*** ./assets/json.json ***!
+  \**************************/
+/*! exports provided: title, default */
+/***/ (function(module) {
+
+eval("module.exports = JSON.parse(\"{\\\"title\\\":\\\"I am JSON file\\\"}\");\n\n//# sourceURL=webpack:///./assets/json.json?");
+
+/***/ }),
+
+/***/ "./assets/logo.png":
+/*!*************************!*\
+  !*** ./assets/logo.png ***!
+  \*************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"d1e12104df69119a90388c937d758f60.png\");\n\n//# sourceURL=webpack:///./assets/logo.png?");
 
 /***/ }),
 
@@ -152,7 +175,7 @@ eval("var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/run
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Post__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Post */ \"./Post.js\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/main.css */ \"./css/main.css\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_main_css__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\nconst post = new _Post__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('Webpack post title')\nconsole.log(post.showTitle())\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Post__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Post */ \"./Post.js\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/main.css */ \"./css/main.css\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_main_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _assets_json_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/json.json */ \"./assets/json.json\");\nvar _assets_json_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./assets/json.json */ \"./assets/json.json\", 1);\n/* harmony import */ var _assets_logo_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/logo.png */ \"./assets/logo.png\");\n\n\n\n\n\nconst post = new _Post__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('Webpack post title', _assets_logo_png__WEBPACK_IMPORTED_MODULE_3__[\"default\"])\nconsole.log(post.showTitle())\n\nconsole.log(_assets_json_json__WEBPACK_IMPORTED_MODULE_2__)\n\nconsole.log(_assets_logo_png__WEBPACK_IMPORTED_MODULE_3__[\"default\"])\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ })
 
