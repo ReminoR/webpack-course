@@ -26,3 +26,7 @@ body {
 p.font_test {
     font-family: 'Avant';
 }
+
+p {
+    color: darkblue;
+}
