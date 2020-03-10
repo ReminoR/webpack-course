@@ -28,6 +28,7 @@ const optimization = () => {
     return config
 }
 
+
 module.exports = {
     context: path.resolve(__dirname, 'src'), //с файлами в какой папке работаем
     mode: 'development',
@@ -36,7 +37,7 @@ module.exports = {
         analytics: './analytics.js' // добавили вторую точку входа
     },
     output: { //выход
-        filename: "[name].[contenthash].js",
+        filename: "[name].js",
         path: path.resolve(__dirname, 'dist') //__dirname - корневая директория
     },
     plugins: [
@@ -54,7 +55,7 @@ module.exports = {
             }
         ]),
         new MiniCssExtractPlugin({
-            filename: "[name].[contenthash].css",
+            filename: "[name].css",
         })
     ],
     module: {
@@ -69,6 +70,19 @@ module.exports = {
                     },
                 },
                 'css-loader'
+            ]
+            },
+            {
+                test: /\.less$/,
+                use: [{
+                    loader: MiniCssExtractPlugin.loader,
+                    options: {
+                        hmr: isDev, //hot module replacement - изменение сущностей без перезагрузки страницы. Необходимо только для режима разработки
+                        reloadAll: true
+                    },
+                },
+                'css-loader',
+                'less-loader'
             ]
             },
             {
