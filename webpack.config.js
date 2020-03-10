@@ -92,7 +92,14 @@ module.exports = {
             {
                 test: /\.(ttf|woff|woff2|eot)$/,
                 use: ['file-loader']
-            }
+            },
+            {
+                test: /\.html$/,
+                loader: 'html-loader',
+                options: {
+                    interpolate: true,
+                },
+            },
         ]
     },
     resolve: {
@@ -102,7 +109,7 @@ module.exports = {
     },
     optimization: optimization(),
     devServer: {
-        port: 4200,
+        port: 4201,
         hot: isDev
     }
 }
