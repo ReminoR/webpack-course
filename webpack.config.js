@@ -4,6 +4,9 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
+const isDev = process.env.NODE_ENV === 'development'
+console.log('IsDev ==', isDev)
+
 module.exports = {
     context: path.resolve(__dirname, 'src'), //с файлами в какой папке работаем
     mode: 'development',
@@ -34,7 +37,15 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader']
+                use: [{
+                    loader: MiniCssExtractPlugin.loader,
+                    options: {
+                        hmr: isDev, //hot module replacement - изменение сущностей без перезагрузки страницы. Необходимо только для режима разработки
+                        reloadAll: true
+                    },
+                },
+                'css-loader'
+            ]
             },
             {
                 test: /\.(png|jpg|svg|gif)$/,
@@ -57,6 +68,7 @@ module.exports = {
         }
     },
     devServer: {
-        port: 4200
+        port: 4200,
+        hot: isDev
     }
 }
