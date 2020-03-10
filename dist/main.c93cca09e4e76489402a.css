@@ -1,0 +1,33 @@
+@font-face {
+    font-family: "Avant";
+    src: url(7dd106d75849bfa889f46ae780ccfff1.ttf) format("truetype");
+}
+@import "~normalize.css"
+
+.container {
+    background-color: pink;
+}
+
+h1 {
+    text-align: center;
+}
+
+.logo {
+    background-image: url(d1e12104df69119a90388c937d758f60.png);
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: "Avant";
+}
+
+p.font_test {
+    font-family: 'Avant';
+}
+
+p {
+    color: darkblue;
+}

@@ -155,28 +155,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "../node_modules/css-loader/dist/cjs.js!./css/fonts.css":
-/*!**************************************************************!*\
-  !*** ../node_modules/css-loader/dist/cjs.js!./css/fonts.css ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"../node_modules/css-loader/dist/runtime/api.js\");\nvar ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ \"../node_modules/css-loader/dist/runtime/getUrl.js\");\nvar ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(/*! ../assets/fonts/avant-garde-book.ttf */ \"./assets/fonts/avant-garde-book.ttf\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\nvar ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);\n// Module\nexports.push([module.i, \"@font-face {\\n    font-family: \\\"Avant\\\";\\n    src: url(\" + ___CSS_LOADER_URL_REPLACEMENT_0___ + \") format(\\\"truetype\\\");\\n}\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./css/fonts.css?../node_modules/css-loader/dist/cjs.js");
-
-/***/ }),
-
-/***/ "../node_modules/css-loader/dist/cjs.js!./css/main.css":
-/*!*************************************************************!*\
-  !*** ../node_modules/css-loader/dist/cjs.js!./css/main.css ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"../node_modules/css-loader/dist/runtime/api.js\");\nvar ___CSS_LOADER_AT_RULE_IMPORT_0___ = __webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js!./fonts.css */ \"../node_modules/css-loader/dist/cjs.js!./css/fonts.css\");\nvar ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ \"../node_modules/css-loader/dist/runtime/getUrl.js\");\nvar ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(/*! ../assets/logo.png */ \"./assets/logo.png\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\nexports.i(___CSS_LOADER_AT_RULE_IMPORT_0___);\nvar ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);\n// Module\nexports.push([module.i, \"@import \\\"~normalize.css\\\"\\n\\n.container {\\n    background-color: pink;\\n}\\n\\nh1 {\\n    text-align: center;\\n}\\n\\n.logo {\\n    background-image: url(\" + ___CSS_LOADER_URL_REPLACEMENT_0___ + \");\\n    background-size: cover;\\n    width: 200px;\\n    height: 200px;\\n    margin: 0 auto;\\n}\\n\\nbody {\\n    font-family: \\\"Avant\\\";\\n}\\n\\np.font_test {\\n    font-family: 'Avant';\\n}\\n\\np {\\n    color: darkblue;\\n}\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./css/main.css?../node_modules/css-loader/dist/cjs.js");
-
-/***/ }),
-
 /***/ "./Post.js":
 /*!*****************!*\
   !*** ./Post.js ***!
@@ -186,18 +164,6 @@ eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../.
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Post; });\nclass Post {\n    constructor(title, img) {\n    this.title = title\n    this.img = img\n    this.date = new Date()\n    }\n\n    showTitle() {\n        console.log(this.title)\n    }\n\n    showDesc() {\n        console.log('description of post')\n    }\n    showLogo() {\n        return JSON.stringify( {\n            title: this.title,\n            img: this.img\n        })\n    }\n}\n\n//# sourceURL=webpack:///./Post.js?");
-
-/***/ }),
-
-/***/ "./assets/fonts/avant-garde-book.ttf":
-/*!*******************************************!*\
-  !*** ./assets/fonts/avant-garde-book.ttf ***!
-  \*******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"7dd106d75849bfa889f46ae780ccfff1.ttf\");\n\n//# sourceURL=webpack:///./assets/fonts/avant-garde-book.ttf?");
 
 /***/ }),
 
@@ -231,7 +197,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./main.css */ \"../node_modules/css-loader/dist/cjs.js!./css/main.css\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\nvar exported = content.locals ? content.locals : {};\n\n\n\nmodule.exports = exported;\n\n//# sourceURL=webpack:///./css/main.css?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./css/main.css?");
 
 /***/ }),
 
